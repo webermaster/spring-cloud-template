@@ -1,4 +1,4 @@
-package com.slalom.spring.cloud.template.service;
+package org.webermaster.spring.cloud.template.service;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
