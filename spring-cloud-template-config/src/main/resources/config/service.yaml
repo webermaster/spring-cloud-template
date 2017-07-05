@@ -1,0 +1,5 @@
+greeting: Service
+hello: Hello
+crud:
+  username: crud
+  password: crud

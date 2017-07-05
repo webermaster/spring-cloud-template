@@ -1,0 +1,5 @@
+greeting: App
+hello: Hello
+service:
+  username: service
+  password: service
