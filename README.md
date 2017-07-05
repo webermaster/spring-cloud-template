@@ -3,7 +3,6 @@
 This project provides a template for the basics of Spring-Cloud, a wrapper around
 Netflix OSS for distributed, cloud-native systems.  Like with all Spring-Boot projects
 any properties can be overriden with JVM parameters.
----
 
 ## Eureka 
 
