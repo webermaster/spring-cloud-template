@@ -1,0 +1,7 @@
+greeting: Service
+service:
+  instance:
+    name: instance-name
+crud:
+  username: username
+  password: password
