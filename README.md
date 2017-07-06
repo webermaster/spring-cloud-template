@@ -30,7 +30,7 @@ mvn spring-boot:run
 ```
 
 Applications using the config server client can refresh their configuration with
-a POST to http://localhost:<app-port>/refresh
+a POST to http://localhost:PORT/refresh
 
 Note: Configuration injected into code on application start via `@Value` and `@Bean` as opposed
 to Spring-Boot's `ConfigurationProperties` can only be refreshed if configuration
@@ -61,7 +61,7 @@ cd *hystrix
 
 The Hystrix dashboard can be viewed at http://localhost:9000/hystrix
 
-Applications that utilize Hystrix typically host their event streams at http://localhost:<app-port>/hystrix.stream
+Applications that utilize Hystrix typically host their event streams at http://localhost:PORT/hystrix.stream
 
 
 ## Turbine
