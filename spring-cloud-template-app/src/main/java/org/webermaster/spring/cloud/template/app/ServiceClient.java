@@ -21,10 +21,10 @@ import java.util.Base64;
 @RefreshScope
 public class ServiceClient {
 
-    @Value("${service.username}")
+    @Value("${app.service.username}")
     public String serviceUsername;
 
-    @Value("${service.password}")
+    @Value("${app.service.password}")
     public String servicePassword;
 
     @Autowired

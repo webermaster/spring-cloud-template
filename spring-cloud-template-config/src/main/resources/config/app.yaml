@@ -1,5 +1,22 @@
 greeting: App
 hello: Hello
-service:
-  username: service
-  password: service
+app:
+  service:
+    username: service
+    password: service
+spring:
+  zipkin:
+    baseUrl: http://localhost:9002
+  sleuth:
+    sampler:
+      percentage: 1.0
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          sleuth: DEBUG
+security:
+  user:
+    name: app
+    password: app

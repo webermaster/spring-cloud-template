@@ -3,3 +3,19 @@ hello: Hello
 crud:
   username: crud
   password: crud
+spring:
+  zipkin:
+    baseUrl: http://localhost:9002
+  sleuth:
+    sampler:
+      percentage: 1.0
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          sleuth: DEBUG
+security:
+  user:
+    name: service
+    password: service

@@ -76,13 +76,26 @@ mvn spring-boot:run
 
 The turbine stream that can be used with the Hystrix dashboard can be found at http://localhost:9001/turbine.stream
 
+## Zipkin
+Zipkin collects data exposed by Sleuth and provides performance and service depedency
+visualization.  It can be used to diagnose performance bottlenecks and analyze application
+architecture.  Zipkin can be started like so:
+
+```bash
+cd *zipkin
+mvn spring-boot:run
+```
+
+The turbine dashboard can be found at http://localhost:9002
+
 ## Applications (deployable demonstration applications)
 
 The following are example application that demonstrate how to use different parts of Spring-Cloud
 
 ### CRUD
-A simple web application that demonstrates a couple ways of consuming a Config Server.
-It can be started like so.
+A simple web application that demonstrates a couple ways of consuming a Config Server. In addition, 
+this service demonstrates how to use Sleuth, exporting metrics for use with the Zipkin dashboard.
+It can be started like so:
 
 ```bash
 cd *crud
@@ -92,10 +105,11 @@ mvn spring-boot:run
 ### Service
 A web application the demonstrates how to use the `EurekaClient` to resolve application
 dependencies for use with the `RestTemplate`. In addition, this service demonstrates how
-to use Hystrix, exposing a Hystrix stream for use with the dashboard. For demonstration
-purposes it is suggested that you start two instances of this service so that the
-following application will take full use of client-side load-balance via its 
-`@LoadBalanced` `RestTemplate` and Ribbon. This service can be started like so:
+to use Hystrix, exposing a Hystrix stream for use with the dashboard and how to use Sleuth,
+exporting metrics for use with the Zipkin dashboard. For demonstration purposes it is suggested
+that you start two instances of this service so that the following application will take full
+use of client-side load-balance via its `@LoadBalanced` `RestTemplate` and Ribbon. This service
+can be started like so:
 
 ```bash
 cd *service
@@ -107,8 +121,9 @@ This web appplication demonstrates how to utilized client-side load-balancing vi
 `@LoadBalanced` `@RestTemplate`.  This done by either using Eureka service-discovery,
 or by using Standalone Ribbon (Which Netflix OSS uses frequently under the hood).
 The Ribbon implementation is current commented out.  In addition, this application
-utilizes Hystrix like the service above and demonstrates how to hide an application
-from service discovery (via `register-with-eureka=false`).  This application can be started like so:
+utilizes Hystrix and Sleuth like the service above and demonstrates how to hide an
+application from service discovery (via `register-with-eureka=false`).  This application 
+can be started like so:
  
 ```bash
 cd *app

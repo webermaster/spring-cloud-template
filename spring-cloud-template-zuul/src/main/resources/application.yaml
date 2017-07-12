@@ -1,11 +1,22 @@
 spring:
   application:
     name: zuul
+  zipkin:
+    baseUrl: http://localhost:9002
+  sleuth:
+    sampler:
+      percentage: 1.0
 server:
   port: 80
 eureka:
   client:
     service-url:
       defaultZone: http://eureka:eureka@localhost:8761/eureka
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          sleuth: DEBUG
 zuul:
   ignored-services: 'config'

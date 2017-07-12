@@ -18,6 +18,7 @@
         <module>spring-cloud-template-crud</module>
         <module>spring-cloud-template-service</module>
         <module>spring-cloud-template-app</module>
+        <module>spring-cloud-template-zipkin</module>
     </modules>
 
     <properties>
