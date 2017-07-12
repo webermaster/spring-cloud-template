@@ -1,4 +1,4 @@
-package org.webermster.spring.cloud.template.hystrix;
+package org.webermaster.spring.cloud.template.hystrix;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

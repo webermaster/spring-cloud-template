@@ -1,5 +1,6 @@
-service:
-  username: username
-  password: password
+app:
+  service:
+    username: username
+    password: password
 greeting: App
 hello: Hello
